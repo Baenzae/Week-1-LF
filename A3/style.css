@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.carousal-wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.carousal-wrap h2{
+    margin: 20px 0;
+    font-size: 34px;
+    color: white;
+
+}
+.carousal{
+    margin-top: 120px;
+    overflow-x: auto;
+    width: 60%;
+    height: auto;
+
+}
+.carousal::-webkit-scrollbar{
+    display: none;
+}
+.slides{
+    width: 120em;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: spin 20s linear infinite;
+
+}
+img{
+    width: 500px;
+    height: auto;
+
+    
+}
+section{
+    background-color: yellowgreen;
+}
+@keyframes spin{
+    from {translate: 0;}
+    to {translate : -100%;}
+}
+:hover {
+    animation-play-state: paused;
+
+}

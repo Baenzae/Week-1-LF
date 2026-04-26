@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    color: black;
+    text-align: center;
+}
+.header h1{
+    font-size: 3rem;
+    color: black;
+    background-color: aquamarine;
+    padding: 10px;
+}
+.nav{
+    display: flex;
+    padding: 20px 32px;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: black;
+}
+/* space between made the two links to be on the extreme left and right of the nav bar */   
+.nav a{
+    text-decoration: none;;
+    font-size: 1.5rem;
+    width: 100px;
+    color: white;
+}
+.nav a:hover{
+    background-color: rgb(42, 217, 159);
+}
+main{
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+/* flex-start will align the article and aside to the top of the main container */
+
+.article{
+    flex:3;
+    padding: 15px;
+    line-height: 1.6;
+    background-color: white;
+    text-align: justify;
+}
+/* flex:3 means the article will take three times the space of the aside */
+.main aside{
+    flex:1;
+    padding: 15px;
+    border-left: 1px solid #ddd;
+    background: #f9f9f9;;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+video, audio{
+    margin-top: 10px;
+    display: block;
+}
+/* block means the video and audio will take the full width of the container and will be on a new line. */
+
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+}
+/* flex direction column means the header, main and footer will be arranged in a column. */
+footer{
+    margin-top: auto;
+    color: #666666;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+/* margin top worked because the body is a flex container and the footer is a flex item. auto means the footer will take all the available space above it, pushing it to the bottom of the page. */
