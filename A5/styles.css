@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shop-layout {
+  display: grid;
+
+  /* Page layout */
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+
+  min-height: 100vh;
+}
+
+/* Assign grid areas */
+.shop-header {
+  grid-area: header;
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+.shop-sidebar {
+  grid-area: sidebar;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.shop-main {
+  grid-area: main;
+  padding: 20px;
+}
+
+.shop-footer {
+  grid-area: footer;
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Product Grid (INSIDE main) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* Simple hover effect */
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+/* for mobile effect, we will stack the layout and make the product grid single column. */
+@media (max-width: 768px) {
+  .shop-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
